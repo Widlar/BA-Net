@@ -126,7 +126,7 @@ def verify_dataset_integrity(folder):
         expected_label_file = join(folder, "labelsTr", c + ".nii.gz")
         label_files.append(expected_label_file)
         # expected_image_files = [join(folder, "imagesTr", c + "_%04.0d.nii.gz" % i) for i in range(num_modalities)]
-        expected_image_files = [join(folder, "imagesTr", c + ".nii.gz" % i) for i in range(num_modalities)]
+        expected_image_files = join(folder, "labelsTr", c + ".nii.gz")
 
         assert isfile(expected_label_file), "could not find label file for case %s. Expected file: \n%s" % (
             c, expected_label_file)
