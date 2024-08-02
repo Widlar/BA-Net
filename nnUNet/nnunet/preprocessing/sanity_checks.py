@@ -126,12 +126,11 @@ def verify_dataset_integrity(folder):
         expected_label_file = join(folder, "labelsTr", c + ".nii.gz")
         label_files.append(expected_label_file)
         # expected_image_files = [join(folder, "imagesTr", c + "_%04.0d.nii.gz" % i) for i in range(num_modalities)]
-        expected_image_files = join(folder, "labelsTr", c + ".nii.gz")
+        expected_image_files = join(folder, "imagesTr", c + ".nii.gz")
 
         assert isfile(expected_label_file), "could not find label file for case %s. Expected file: \n%s" % (
             c, expected_label_file)
-        assert all([isfile(i) for i in
-                    expected_image_files]), "some image files are missing for case %s. Expected files:\n %s" % (
+        assert isfile(expected_image_files), "some image files are missing for case %s. Expected files:\n %s" % (
             c, expected_image_files)
 
         # verify that all modalities and the label have the same shape and geometry.
