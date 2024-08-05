@@ -28,8 +28,8 @@ def summarize_plans(file):
     print("normalization_schemes", plans['normalization_schemes'])
     print("stages...\n")
 
-    # Установка нового batch size
-    plans['plans_per_stage'][0]['batch_size'] = 1
+    # Setting a new batch size
+    # plans['plans_per_stage'][0]['batch_size'] = 1
 
     for i in range(len(plans['plans_per_stage'])):
         print("stage: ", i)
