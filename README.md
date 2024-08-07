@@ -19,6 +19,7 @@ cd nnUNet
 pip install torch==1.8.0+cu101 torchvision==0.9.0+cu101 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -e .  # install torch and nnUNet (equipped with BA-Net)
 pip install hiddenlayer graphviz IPython
+pip install numpy==1.19.5 matplotlib==3.3.4 nibabel==3.2.1 pandas==1.1.5 medpy==0.4.0
 ```
 
 3. Configure the paths in `.envrc` to the proper path:
