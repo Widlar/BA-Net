@@ -10,7 +10,7 @@ data_base = "/gpfs/gpfs0/s.mokhnenko/datasets/"
 nnUNet_raw_data_base = os.path.join(data_base, "amos_nnUNet/nnUNet_raw_data")
 
 # Task names
-task1001_ct = "Task1001_AMOS_CT_and_MR"
+task1001_ct = "Task1003_AMOS_CT_and_MR"
 
 # Function for creating directory lists
 def create_target_dirs(task_name):
